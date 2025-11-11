@@ -29,3 +29,9 @@ where hora between '7:00'and '14:00'
 
 select * from registro
 where hora > '8:00'
+
+select * from registro
+where extract(month from fecha)=8
+
+update registro set cedula_empleado='082345679'
+where extract(month from fecha)=8

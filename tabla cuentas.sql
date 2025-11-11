@@ -31,3 +31,9 @@ where fecha_creacion between current_date-interval '2 months'and current_date
 
 select numero_cuenta,saldo from cuentas
 where fecha_creacion between current_date-interval '2 months'and current_date
+
+select * from cuentas
+where cedula_propietario like '17%'
+
+update cuentas set saldo =10 
+where cedula_propietario like '17%'

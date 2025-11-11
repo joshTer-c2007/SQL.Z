@@ -35,3 +35,9 @@ where descripcion is null
 
 select * from productos
 where precio:: numeric between 23.00 and 40.00
+
+select * from productos
+where descripcion is null
+
+update productos set stock=0
+where descripcion is null

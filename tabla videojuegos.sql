@@ -32,3 +32,10 @@ between 00.00 and 20.00
 select * from videojuegos 
 where descripcion is null
 
+select * from videojuegos
+where valoracion>9
+
+update videojuegos
+set descripcion='Mejor puntuado'
+where valoracion>9
+

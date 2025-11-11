@@ -26,3 +26,14 @@ where tipo like 'D%'
 
 select * from transacciones
 where monto::numeric between 200 and 2000
+
+select * from transacciones 
+where monto:: numeric >100 and monto:: numeric <500
+and extract(month from fecha)=9
+and extract(month from fecha)between 14 and 20
+
+update transacciones 
+set tipo='T'
+where monto:: numeric >100 and monto:: numeric <500
+and extract(month from fecha)=9
+and extract(month from fecha)between 14 and 20
