@@ -20,3 +20,9 @@ insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
 values (236895,'12327',900.00,'C','12/03/2018','9:00')
 
 select * from transacciones
+
+select * from transacciones
+where tipo like 'D%'
+
+select * from transacciones
+where monto::numeric between 200 and 2000

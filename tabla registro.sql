@@ -21,3 +21,11 @@ insert into registro(codigo_registro,cedula_empleado,fecha,hora)
 values(234517,'17328970','23/11/2021','14:00')
 
 select * from registro
+
+select cedula_empleado,fecha,hora from registro
+
+select * from registro
+where hora between '7:00'and '14:00'
+
+select * from registro
+where hora > '8:00'

@@ -6,18 +6,29 @@ valoracion int not null
 )
 
 insert into videojuegos(codigo,nombre,descripcion,valoracion)
-values (23568,'Dragon Ball Figthers Z','Accion y pelea',30.00)
+values (23568,'Dragon Ball Figthers Z','Accion y pelea',10)
 
 insert into videojuegos(codigo,nombre,descripcion,valoracion)
-values (23245,'Super smash bros 4','Accion y pelea',20.00)
+values (23245,'Super smash bros 4','Accion y pelea',10)
 
 insert into videojuegos(codigo,nombre,descripcion,valoracion)
-values (23327,'Super Smash Bros Ultimate','Accion y pelea',60.00)
+values (23327,'Super Smash Bros Ultimate','Accion y pelea',9)
 
 insert into videojuegos(codigo,nombre,descripcion,valoracion)
-values (23456,'Dragon Ball Dokkan','Aventura',00.00)
+values (23456,'Dragon Ball Dokkan','Aventura',8)
 
 insert into videojuegos(codigo,nombre,descripcion,valoracion)
-values (23419,'Dragon Ball Gekishin','Puzzle',00.00)
+values (23419,'Dragon Ball Gekishin','Puzzle',4)
 
 select * from videojuegos
+
+select * from videojuegos
+where nombre like 'C%'
+
+select * from videojuegos
+where valoracion 
+between 00.00 and 20.00
+
+select * from videojuegos 
+where descripcion is null
+

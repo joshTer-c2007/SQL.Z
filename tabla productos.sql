@@ -28,4 +28,10 @@ values(34256,'Pantalon',20.00,27)
  values (31567,'Jeans','Prenda',40.00,70)
 
 select * from productos
- 
+where nombre = '%q'
+
+select * from productos
+where descripcion is null 
+
+select * from productos
+where precio:: numeric between 23.00 and 40.00
