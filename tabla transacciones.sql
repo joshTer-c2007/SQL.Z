@@ -37,3 +37,7 @@ set tipo='T'
 where monto:: numeric >100 and monto:: numeric <500
 and extract(month from fecha)=9
 and extract(month from fecha)between 14 and 20
+
+delete from transacciones
+where extract(month from fecha)=8
+and extract(month from fecha)between 14 and 20

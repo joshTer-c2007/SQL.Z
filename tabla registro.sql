@@ -35,3 +35,6 @@ where extract(month from fecha)=8
 
 update registro set cedula_empleado='082345679'
 where extract(month from fecha)=8
+
+delete from registro 
+where extract(month from fecha)=6
