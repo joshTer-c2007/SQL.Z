@@ -1,0 +1,16 @@
+package com.dragonball2;
+
+public class Goku {
+	public void validarEdad(int edad){
+		if(edad>=18) {
+			System.out.println("Es mayor de edad");
+		}else if(edad >=12 && edad<18){
+			System.out.println("Es adolescente");
+		}else if(edad >0 && edad<12) {
+			System.out.println("Es niño");
+		}else {
+			System.out.println("Edad incorrecta");
+		}
+	}
+
+}
