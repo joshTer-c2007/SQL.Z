@@ -1,4 +1,6 @@
-package com.dragonball;
+package com.dragonball.test;
+
+import com.dragonball.Producto;
 
 public class TestProducto {
 

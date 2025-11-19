@@ -1,4 +1,6 @@
-package com.dragonball;
+package com.dragonball.test;
+
+import com.dragonball.Fecha;
 
 public class TestFecha {
 
