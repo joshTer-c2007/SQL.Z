@@ -7,18 +7,18 @@ public class TestPersona {
 		Goku g;
 		Goku g2=new Goku();
 		g=new Goku();//instancia un objeto
-		System.out.print("nombre:"+g.nombre);
-		System.out.print("edad:"+g.edad);
-		System.out.print("estatura:"+g.estatura);
+		System.out.print("nombre:"+g.getNombre());
+		System.out.print("edad:"+g.getEdad());
+		System.out.print("estatura:"+g.getEstatura());
 		
-		g.nombre="Josh";
-		g.edad=18;
-		g.estatura=1.70;
+		g.setNombre("Josh");
+		g.setEdad(18);;
+		g.setEstatura(1.78);
 		
 		System.out.println("---------------");
-		System.out.print("nombre:"+g.nombre);
-		System.out.print("edad:"+g.edad);
-		System.out.print("estatura:"+g.estatura);
+		System.out.print("nombre:"+g.getNombre());
+		System.out.print("edad:"+g.getEdad());
+		System.out.print("estatura:"+g.getEstatura());
 	}
 
 }

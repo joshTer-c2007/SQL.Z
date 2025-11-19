@@ -6,18 +6,15 @@ public class TestCuadrado {
 		// TODO Auto-generated method stub
 		Cuadrado c1=new Cuadrado();
 		Cuadrado c2=new Cuadrado();
-		double area;
-		double perimetro;
 		
-		c1.lado=4;
+		c1.setLado(4);
 		
-		c2.lado1=3;
+		c2.setLado1(3);
 		
-		area=c1.calcularArea();
-		perimetro=c2.calcularPerimetro();
 		
-		System.out.println("Area de c1 "+area);
-		System.out.println("Area de c2 "+perimetro);
+		
+		System.out.println("Area de c1 "+c1.getLado());
+		System.out.println("Area de c2 "+c2.getLado1());
 
 	}
 
