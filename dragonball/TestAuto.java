@@ -9,6 +9,8 @@ public class TestAuto {
 		Auto a2;
 		a2= new Auto();
 		
+		Auto a3=new Auto("PWE-3456", 2004, 10.000);
+		
 		System.out.println("marca"+ a.getMarca());
 		System.out.println("anio"+ a.getAnio());
 		System.out.println("precio"+ a.getPrecio());
@@ -29,6 +31,11 @@ public class TestAuto {
 		System.out.println("marca"+ a2.getMarca());
 		System.out.println("anio"+ a2.getAnio());
 		System.out.println("precio"+ a2.getPrecio());
+		
+		System.out.println("marca "+ a3.getMarca());
+		System.out.println("anio "+ a3.getAnio());
+		System.out.println("precio "+ a3.getPrecio());
+
 
 	}
 
