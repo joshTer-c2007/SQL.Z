@@ -71,3 +71,29 @@ where cedula like '18%'
 
 select * from estudiantes
 where cedula like '17%' or cedula like '%06'
+
+select * from estudiantes
+
+alter table estudiantes
+add column profesores char(10)
+
+create table profesores(
+codigo int,
+nombre varchar(50),
+constraint profesores_pk primary key(codigo)
+)
+select * from profesores
+
+insert into profesores(codigo,nombre)
+values (23490,'Marcos');
+insert into profesores(codigo,nombre)
+values (13465,'Carlos');
+insert into profesores(codigo,nombre)
+values (09345,'Kerlly');
+insert into profesores(codigo,nombre)
+values (46378,'Dario')
+
+alter table estudiantes
+add constraint estudiantes_profesores_fk
+foreign key(profesores)
+references profesores(codigo)

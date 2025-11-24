@@ -67,3 +67,20 @@ where extract(month from fecha)=9 or cedula_empleado like '17%'
 select * from registro
 where extract(month from fecha)=8
 and extract(month from fecha)between 8 and 12
+
+select * from registro
+alter table registro
+add column empleado char(10)
+
+create table empleado(
+codigo_empleado int,
+nombre varchar(25),
+fecha date,
+hora time,
+constraint empleado_pk primary key(codigo_empleado)
+)
+
+alter table empleado
+add constraint registro_empleado_fk
+foreign key(empleado)
+references empleado(codigo_empleado)

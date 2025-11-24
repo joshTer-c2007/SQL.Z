@@ -77,3 +77,18 @@ where tipo= 'C' and numero_cuenta between '222001' and '22004'
 
 select * from transacciones 
 where codigo between 1 and 5 and numero_cuenta between '22002' and '22004'
+
+select * from transacciones
+alter table transacciones
+add column banco char(10)
+
+create table banco(
+codigo_banco int primary key,
+codigo_transaccion int,
+detalle varchar(100)
+)
+
+alter table transacciones
+add constraint transacciones_banco_fk
+foreign key (banco)
+references transacciones(codigo_banco)

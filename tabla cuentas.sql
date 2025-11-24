@@ -67,3 +67,34 @@ where saldo:: numeric >100 and saldo:: numeric<1000
 
 select * from cuentas
 where saldo:: numeric =0 or cedula_propietario like '%2'
+
+select * from cuentas
+alter table cuentas
+add column usuario char (30)
+
+create table usuario (
+cedula char(5),
+nombre varchar(25),
+apellido varchar (25),
+tipo_cuenta varchar(20),
+limite_credito decimal(10.5),
+constraint usuario_pk primary key(cedula)
+)
+
+alter table cuentas 
+add constraint cuentas_usuario_fk
+foreign key(usuario)
+references usuario(cedula)
+
+select * from usuario
+
+insert into usuario(cedula,nombre,apellido,tipo_cuenta,limite_credito)
+values ('27839','Marco','Antonio','C',10.5);
+insert into usuario(cedula,nombre,apellido,tipo_cuenta,limite_credito)
+values ('27456','Alberto','Instantaneo','D',30.0);
+insert into usuario(cedula,nombre,apellido,tipo_cuenta,limite_credito)
+values ('89046','Samuel','Carrera','T',20.0);
+insert into usuario(cedula,nombre,apellido,tipo_cuenta,limite_credito)
+values ('32893','Elvis','Cocho','U',24.0);
+insert into usuario(cedula,nombre,apellido,tipo_cuenta,limite_credito)
+values ('56472','Alan','Brito','F',10.9)

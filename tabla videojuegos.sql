@@ -83,3 +83,20 @@ where codigo between 3 and 7 or valoracion >7
 
 select * from videojuegos
 where valoracion >7 and nombre like 'C%' or valoracion >8 and nombre like 'D%'
+
+select * from videojuegos
+
+alter table videojuegos
+add column plataforma char(10)
+
+create table plataforma(
+id_plataforma int ,
+nombre_plataforma varchar(50),
+codigo_videojuego int,
+constraint plataforma_pk primary key(id_plataforma)
+)
+
+alter table videojuegos
+add constraint productos_plataforma_fk
+foreign key (plataforma)
+references plataforma(id_plataforma)
