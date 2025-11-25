@@ -100,3 +100,15 @@ alter table videojuegos
 add constraint productos_plataforma_fk
 foreign key (plataforma)
 references plataforma(id_plataforma)
+
+select nombre,descripcion,valoracion from videojuegos
+where (
+descripcion like '%Guerra%'
+and valoracion>7
+)
+or(
+nombre like 'C%'
+and valoracion >8
+and descripcion like 'D%'
+)
+

@@ -98,3 +98,10 @@ insert into usuario(cedula,nombre,apellido,tipo_cuenta,limite_credito)
 values ('32893','Elvis','Cocho','U',24.0);
 insert into usuario(cedula,nombre,apellido,tipo_cuenta,limite_credito)
 values ('56472','Alan','Brito','F',10.9)
+
+select * from 
+cuentas cu, usuario us
+where cu.usuario = us.cedula
+
+
+

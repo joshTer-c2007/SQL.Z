@@ -77,3 +77,8 @@ where nombre like 'M%'
 
 select * from productos 
 where stock = 0
+
+select nombre,stock,precio from productos
+where nombre like '%m%'
+or stock=0
+or precio:: numeric =0;

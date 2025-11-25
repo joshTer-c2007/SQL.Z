@@ -97,3 +97,7 @@ alter table estudiantes
 add constraint estudiantes_profesores_fk
 foreign key(profesores)
 references profesores(codigo)
+
+select * from estudiantes e
+where e.apellido like '%n%'
+

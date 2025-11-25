@@ -92,3 +92,8 @@ alter table transacciones
 add constraint transacciones_banco_fk
 foreign key (banco)
 references transacciones(codigo_banco)
+
+select * from transacciones
+where tipo='C'and numero_cuenta between '22001' and '22004'
+select * from transacciones
+where codigo = 1;
