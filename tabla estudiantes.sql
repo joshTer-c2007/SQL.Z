@@ -101,3 +101,8 @@ references profesores(codigo)
 select * from estudiantes e
 where e.apellido like '%n%'
 
+select * from profesores 
+
+select nombre, count(nombre) from profesores
+group by nombre
+

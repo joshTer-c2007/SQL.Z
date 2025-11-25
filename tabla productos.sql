@@ -82,3 +82,8 @@ select nombre,stock,precio from productos
 where nombre like '%m%'
 or stock=0
 or precio:: numeric =0;
+
+select MAX(cast(precio as numeric)) 
+from productos
+
+select SUM(stock) from productos

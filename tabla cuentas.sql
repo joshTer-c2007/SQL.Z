@@ -103,5 +103,13 @@ select * from
 cuentas cu, usuario us
 where cu.usuario = us.cedula
 
+select * from cuentas
+select * from usuario
+
+select AVG(limite_credito) from usuario
+where cedula='27839'
+
+select tipo_cuenta,count(tipo_cuenta) from usuario
+group by tipo_cuenta
 
 

@@ -96,6 +96,23 @@ codigo_videojuego int,
 constraint plataforma_pk primary key(id_plataforma)
 )
 
+insert into plataforma(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(127839,'Steam',329);
+insert into plataforma(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(127372,'Steam',099);
+insert into plataforma(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(122901,'PS4',3929);
+insert into plataforma(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(12374,'Nintendo',309);
+insert into plataforma(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(123829,'PS4',3920);
+insert into plataforma(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(12490,'Nintendo',3249);
+insert into plataforma(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(244575,'DragonBall',229);
+insert into plataforma(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(124738,'DragonBall',129)
+
 alter table videojuegos
 add constraint productos_plataforma_fk
 foreign key (plataforma)
@@ -112,3 +129,7 @@ and valoracion >8
 and descripcion like 'D%'
 )
 
+select nombre_plataforma,count(nombre_plataforma) from plataforma
+group by nombre_plataforma
+
+select round(AVG(valoracion),2) as valoracion from videojuegos

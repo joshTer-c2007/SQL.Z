@@ -84,3 +84,6 @@ alter table empleado
 add constraint registro_empleado_fk
 foreign key(empleado)
 references empleado(codigo_empleado)
+
+select codigo_registro, count(codigo_registro) from registro
+group by codigo_registro
