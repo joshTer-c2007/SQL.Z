@@ -2,9 +2,15 @@ create table productos(
      codigo int primary key,
 	 nombre varchar(50) not null,
 	 descripcion varchar(200),
-	 precio money not null,
+	 precio money ,
 	 stock int not null
 )
+
+insert into productos(codigo,nombre,stock)
+values(12345,'Abrigo',34)
+
+insert into productos(codigo,nombre,precio,stock)
+values(12098,'Gorra',10.00,90)
 
 insert into productos(codigo,nombre,precio,stock)
 values(12458,'Camisa',30.00,34)
@@ -87,3 +93,5 @@ select MAX(cast(precio as numeric))
 from productos
 
 select SUM(stock) from productos
+
+drop table productos

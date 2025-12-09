@@ -6,6 +6,9 @@ valoracion int not null
 )
 
 insert into videojuegos(codigo,nombre,descripcion,valoracion)
+values(28934,'Dragon ball Legends','Pelea y destreza',10)
+
+insert into videojuegos(codigo,nombre,descripcion,valoracion)
 values (23568,'Dragon Ball Figthers Z','Accion y pelea',10)
 
 insert into videojuegos(codigo,nombre,descripcion,valoracion)
@@ -54,6 +57,8 @@ values(63549, 'Dragon Ball', 'juego de baile', 8);
 
 
 select * from videojuegos
+
+delete from videojuegos where codigo=28934
 
 select * from videojuegos
 where nombre like 'C%'
@@ -133,3 +138,7 @@ select nombre_plataforma,count(nombre_plataforma) from plataforma
 group by nombre_plataforma
 
 select round(AVG(valoracion),2) as valoracion from videojuegos
+
+drop table videojuegos;
+
+drop table plataforma

@@ -22,6 +22,8 @@ values('12365','17234','25/05/2016',1000.00)
 insert into cuentas (numero_cuenta,cedula_propietario,fecha_creacion,saldo)
 values('12564','17263','25/12/2024',500.00)
 
+
+
 insert into cuentas (numero_cuenta,cedula_propietario,fecha_creacion,saldo)
 values (25569,17504,'15/01/2030',500);
 insert into cuentas (numero_cuenta,cedula_propietario,fecha_creacion,saldo)
