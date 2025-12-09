@@ -2,7 +2,9 @@ package Servicies;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -56,5 +58,41 @@ public class AdminPer {
 			throw new Exception("Error xd 1");
 		}
 	}
+	
+	public static ArrayList<Persona> buscar(String busque) throws Exception{
+		ArrayList<Persona> personas=new ArrayList<Persona>();
+		Connection con=null;
+		PreparedStatement ps = null;
+		ResultSet rs= null;
+		try {
+			con=BDD.conectar();
+			con.prepareStatement("Select * from personas where nombre like ? ");
+			ps.setString(1, "%+busque%");
+			
+			rs=ps.executeQuery();
+			while(rs.next()) {
+				String nombre=rs.getString("Nombre");
+				int valoracion=rs.getInt("Valoracion");
+				
+				Persona p= new Persona();
+				p.setNombre(nombre);
+				p.setValoracion(valoracion);
+			}
+		} catch (Exception e) {
+			LOGGER.error("Error base de datos");
+			throw new Exception("error sos");
+		}finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				LOGGER.error("Error base de datos");
+				throw new Exception("error sos");
+			}
+		}
+		
+		return personas;
+	}
 
 }
+
+
